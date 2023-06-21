@@ -26,6 +26,11 @@ const productSchema = new mongoose.Schema({
 
 const Product = mongoose.model("Product", productSchema);
 
+app.get('/', (req, res) => {
+  res.send('Welcome to the backend app!');
+});
+
+
 app.get('/api/products', async (req, res) => {
   try {
     const products = await Product.find();
