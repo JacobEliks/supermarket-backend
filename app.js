@@ -6,7 +6,11 @@ const mongoose = require("mongoose");
 const app = express();
 
 app.use(bodyParser.urlencoded({extended: true}));
-mongoose.connect("mongodb+srv://jacobeliks:utorul62@supermarket.67hvc94.mongodb.net/productsDB")
+const uri = process.env.MONGODB_URI;
+mongoose.connect(uri, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 const productSchema = new mongoose.Schema({
     id: Number,
