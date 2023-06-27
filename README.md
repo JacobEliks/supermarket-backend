@@ -39,7 +39,7 @@ To run the application locally on your machine, follow these steps:
    node app.js
    ```
 
-5. Go to /api/products endpoint to see the data that is sored in MongoDB.
+5. Go to /api/products and /api/products/<id> endpoints to see the data that is sored in MongoDB.
 
 ## Contributing
 
